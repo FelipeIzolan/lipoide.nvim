@@ -9,8 +9,20 @@ local function apply_config()
   end
 
   if M.config.transparent_column then
+    highlight.DiagnosticError.bg = nil
+    highlight.DiagnosticWarn.bg = nil
+    highlight.DiagnosticInfo.bg = nil
+    highlight.DiagnosticHint.bg = nil
+
+    highlight.DiagnosticSignError.bg = nil
+    highlight.DiagnosticSignWarn.bg = nil
+    highlight.DiagnosticSignInfo.bg = nil
+    highlight.DiagnosticSignHint.bg = nil
+
     highlight.SignColumn.bg = nil
     highlight.FoldColumn.bg = nil
+
+    highlight.LineNr.bg = nil
   end
 
   if M.config.comment_italic then
