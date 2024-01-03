@@ -16,6 +16,7 @@ local palette = {
   bright_cyan = "#7feeff",
   --
   comment = "#303030",
+  menu = "#101010",
   gutter_bg = "#090707"
 }
 

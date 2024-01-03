@@ -31,6 +31,8 @@ local highlight = {
   FoldColumn = { bg = palette.gutter_bg },
   SignColumn = { bg = palette.gutter_bg },
 
+  Pmenu = { fg = palette.fg, bg = palette.menu },
+
   -- Treesitter
   ['@method'] = { fg = palette.bright_blue },
   ['@type.qualifier'] = { fg = palette.purple },
