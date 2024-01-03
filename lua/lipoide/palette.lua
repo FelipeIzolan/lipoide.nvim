@@ -1,6 +1,6 @@
 local palette = {
   bg = "#050303",
-  fg = "#fcf4f6",
+  fg = "#fceff2",
   --
   red = "#d5212e",
   green = "#97f461",
@@ -12,8 +12,8 @@ local palette = {
   magenta = "#ed93c6",
   --
   bright_red = "#ff4c58",
-  bright_blue = "#97b9f4",
-  bright_cyan = "#b7f0ff",
+  bright_blue = "#7faeff",
+  bright_cyan = "#7feeff",
   --
   comment = "#303030",
   gutter_bg = "#090707"

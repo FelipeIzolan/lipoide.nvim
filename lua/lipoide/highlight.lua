@@ -7,6 +7,7 @@ local highlight = {
   VisualNOS = { bg = palette.comment },
   FloatBorder = { fg = palette.comment },
   LineNr = { fg = palette.comment, bg = palette.gutter_bg },
+  EndOfBuffer = { fg = palette.comment },
 
   String = { fg = palette.green },
   Number = { fg = palette.orange },
@@ -15,10 +16,12 @@ local highlight = {
 
   Operator = { fg = palette.purple },
   Statement = { fg = palette.purple },
+  Conditional = { fg = palette.purple },
   Keyword = { fg = palette.purple },
   Keywords = { fg = palette.purple },
   Include = { fg = palette.purple },
-  Constant = { fg = palette.orange },
+  Constant = { fg = palette.fg },
+  Special = { fg = palette.magenta },
   Identifier = { fg = palette.fg },
   Function = { fg = palette.bright_blue },
   Type = { fg = palette.blue },
@@ -29,19 +32,17 @@ local highlight = {
   SignColumn = { bg = palette.gutter_bg },
 
   -- Treesitter
+  ['@method'] = { fg = palette.bright_blue },
+  ['@type.qualifier'] = { fg = palette.purple },
   ['@keyword.function'] = { fg = palette.purple },
+  ['@Function.builtin'] = { fg = palette.bright_blue },
   ['@variable.builtin'] = { fg = palette.purple },
-
   ['@constructor'] = { fg = palette.bright_blue },
   ['@constructor.lua'] = { fg = palette.bright_cyan },
-
   ['@punctuation.delimiter'] = { fg = palette.bright_cyan },
   ['@punctuation.bracket'] = { fg = palette.bright_cyan },
 
   -- LSP
-  ['@lsp.type.class'] = { fg = palette.fg },
-  ['@lsp.typemod.variable.definition.lua'] = { fg = palette.purple },
-
   DiagnosticError = { fg = palette.red, bg = palette.gutter_bg },
   DiagnosticWarn = { fg = palette.yellow, bg = palette.gutter_bg },
   DiagnosticInfo = { fg = palette.cyan, bg = palette.gutter_bg },
@@ -66,6 +67,9 @@ local highlight = {
   DiagnosticVirtualTextWarn = { fg = palette.yellow },
   DiagnosticVirtualTextInfo = { fg = palette.cyan },
   DiagnosticVirtualTextHint = { fg = palette.cyan },
+
+  -- NETRW
+  NetrwDir = { fg = palette.bright_blue }
 }
 
 return highlight
