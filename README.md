@@ -10,6 +10,7 @@ The ultra-dark-badass-neovim-theme.
 -- or
 { 
   'FelipeIzolan/lipoide.nvim',
+  dependencies = { 'nvim-treesitter/nvim-treesitter' },
   config = function()
     require("lipoide").setup({
       transparent = false, -- boolean

@@ -3,8 +3,8 @@ local palette = require("lipoide.palette")
 local highlight = {
   Normal = { fg = palette.fg, bg = palette.bg },
   NormalFloat = { fg = palette.fg, bg = palette.gutter_bg },
-  Visual = { bg = palette.comment },
-  VisualNOS = { bg = palette.comment },
+  Visual = { bg = palette.menu },
+  VisualNOS = { bg = palette.menu },
   FloatBorder = { fg = palette.comment },
   LineNr = { fg = palette.comment, bg = palette.gutter_bg },
   EndOfBuffer = { fg = palette.comment },
