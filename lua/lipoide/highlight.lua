@@ -1,77 +1,87 @@
 local palette = require("lipoide.palette")
 
+local t = 'f'
+local t = 432.43
+local r = true
+local r = 321321
+
 local highlight = {
   Normal = { fg = palette.fg, bg = palette.bg },
   NormalFloat = { fg = palette.fg, bg = palette.gutter_bg },
   Visual = { bg = palette.menu },
   VisualNOS = { bg = palette.menu },
   FloatBorder = { fg = palette.comment },
-  LineNr = { fg = palette.comment, bg = palette.gutter_bg },
   EndOfBuffer = { fg = palette.comment },
 
-  String = { fg = palette.green },
-  Number = { fg = palette.orange },
-  Float = { fg = palette.orange },
-  Boolean = { fg = palette.magenta },
+  String = { fg = palette.agreen },
+  Number = { fg = palette.agreen },
+  Float = { fg = palette.agreen },
+  Boolean = { fg = palette.agreen },
 
-  Operator = { fg = palette.purple },
-  Statement = { fg = palette.purple },
-  Conditional = { fg = palette.purple },
-  Keyword = { fg = palette.purple },
-  Keywords = { fg = palette.purple },
-  Include = { fg = palette.purple },
+  Operator = { fg = palette.green },
+  Statement = { fg = palette.green },
+  Conditional = { fg = palette.green },
+  Keyword = { fg = palette.green },
+  Keywords = { fg = palette.green },
+  Include = { fg = palette.green },
   Constant = { fg = palette.fg },
-  Special = { fg = palette.magenta },
+  Special = { fg = palette.blue },
   Identifier = { fg = palette.fg },
-  Function = { fg = palette.bright_blue },
-  Type = { fg = palette.blue },
+  Function = { fg = palette.blue },
+  Type = { fg = palette.dgreen },
   Comment = { fg = palette.comment },
-  Error = { fg = palette.bright_red },
+  Error = { fg = palette.red },
+  PreProc = { fg = palette.green },
 
   FoldColumn = { bg = palette.gutter_bg },
   SignColumn = { bg = palette.gutter_bg },
+  LineNr = { fg = palette.comment, bg = palette.gutter_bg },
 
   Pmenu = { fg = palette.fg, bg = palette.menu },
 
   -- Treesitter
-  ['@method'] = { fg = palette.bright_blue },
-  ['@type.qualifier'] = { fg = palette.purple },
-  ['@keyword.function'] = { fg = palette.purple },
-  ['@Function.builtin'] = { fg = palette.bright_blue },
-  ['@variable.builtin'] = { fg = palette.purple },
-  ['@constructor'] = { fg = palette.bright_blue },
-  ['@constructor.lua'] = { fg = palette.bright_cyan },
-  ['@punctuation.delimiter'] = { fg = palette.bright_cyan },
-  ['@punctuation.bracket'] = { fg = palette.bright_cyan },
+  ['@method'] = { fg = palette.blue },
+  ['@character'] = { fg = palette.agreen },
+  ['@type.qualifier'] = { fg = palette.green },
+  ['@keyword.function'] = { fg = palette.green },
+  ['@Function.builtin'] = { fg = palette.blue },
+  ['@variable.builtin'] = { fg = palette.green },
+  ['@constructor'] = { fg = palette.blue },
+  ['@constructor.lua'] = { fg = palette.green },
+  ['@punctuation.delimiter'] = { fg = palette.green },
+  ['@punctuation.bracket'] = { fg = palette.green },
 
   -- LSP
   DiagnosticError = { fg = palette.red, bg = palette.gutter_bg },
   DiagnosticWarn = { fg = palette.yellow, bg = palette.gutter_bg },
-  DiagnosticInfo = { fg = palette.cyan, bg = palette.gutter_bg },
-  DiagnosticHint = { fg = palette.cyan, bg = palette.gutter_bg },
+  DiagnosticInfo = { fg = palette.blue, bg = palette.gutter_bg },
+  DiagnosticHint = { fg = palette.blue, bg = palette.gutter_bg },
 
   DiagnosticUnderlineError = { underline = true, sp = palette.red },
   DiagnosticUnderlineWarn = { underline = true, sp = palette.yellow },
-  DiagnosticUnderlineInfo = { underline = true, sp = palette.cyan },
-  DiagnosticUnderlineHint = { underline = true, sp = palette.cyan },
+  DiagnosticUnderlineInfo = { underline = true, sp = palette.blue },
+  DiagnosticUnderlineHint = { underline = true, sp = palette.blue },
 
   DiagnosticSignError = { fg = palette.red, bg = palette.gutter_bg },
   DiagnosticSignWarn = { fg = palette.yellow, bg = palette.gutter_bg },
-  DiagnosticSignInfo = { fg = palette.cyan, bg = palette.gutter_bg },
-  DiagnosticSignHint = { fg = palette.cyan, bg = palette.gutter_bg },
+  DiagnosticSignInfo = { fg = palette.blue, bg = palette.gutter_bg },
+  DiagnosticSignHint = { fg = palette.blue, bg = palette.gutter_bg },
 
   DiagnosticFloatingError = { fg = palette.red },
   DiagnosticFloatingWarn = { fg = palette.yellow },
-  DiagnosticFloatingInfo = { fg = palette.cyan },
-  DiagnosticFloatingHint = { fg = palette.cyan },
+  DiagnosticFloatingInfo = { fg = palette.blue },
+  DiagnosticFloatingHint = { fg = palette.blue },
 
   DiagnosticVirtualTextError = { fg = palette.red },
   DiagnosticVirtualTextWarn = { fg = palette.yellow },
-  DiagnosticVirtualTextInfo = { fg = palette.cyan },
-  DiagnosticVirtualTextHint = { fg = palette.cyan },
+  DiagnosticVirtualTextInfo = { fg = palette.blue },
+  DiagnosticVirtualTextHint = { fg = palette.blue },
 
   -- NETRW
-  NetrwDir = { fg = palette.bright_blue }
+  NetrwDir = { fg = palette.green },
+
+  -- Lazy
+  LazyButton = { fg = palette.fg , bg = palette.gutter_bg }
 }
 
 return highlight
