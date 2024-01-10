@@ -1,6 +1,5 @@
 # 👽 lipoide.nvim
-![](https://github.com/FelipeIzolan/delfos/assets/80170121/93490f18-33db-432b-ad38-f0d5f1de3892)
-The ultra-dark-badass-neovim-theme.
+![image](https://github.com/FelipeIzolan/lipoide.nvim/assets/80170121/379236a5-184a-44e0-9b21-103d2eb69c58)
 
 ## 🚀 Installation && Usage
 
@@ -37,8 +36,8 @@ vim.cmd("colorscheme lipoide")
 ```
 
 # 🍭 Colors
+![image](https://github.com/FelipeIzolan/lipoide.nvim/assets/80170121/94e1ae9a-d389-4e49-9888-a759abd99b0b)
 
-![](https://github.com/FelipeIzolan/delfos/assets/80170121/7b28485a-ebb4-41d9-a653-86f87b14d895)
 
 ## 🔗 Compatibility
 
