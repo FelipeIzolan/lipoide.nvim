@@ -26,7 +26,7 @@ local highlight = {
   Include = { fg = palette.green },
   Constant = { fg = palette.fg },
   Special = { fg = palette.blue },
-  Identifier = { fg = palette.fg },
+  Identifier = { fg = palette.green },
   Function = { fg = palette.blue },
   Type = { fg = palette.dgreen },
   Comment = { fg = palette.comment },
