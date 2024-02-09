@@ -1,10 +1,5 @@
 local palette = require("lipoide.palette")
 
-local t = 'f'
-local t = 432.43
-local r = true
-local r = 321321
-
 local highlight = {
   Normal = { fg = palette.fg, bg = palette.bg },
   NormalFloat = { fg = palette.fg, bg = palette.gutter_bg },
@@ -26,7 +21,7 @@ local highlight = {
   Include = { fg = palette.green },
   Constant = { fg = palette.fg },
   Special = { fg = palette.blue },
-  Identifier = { fg = palette.green },
+  Identifier = { fg = palette.fg },
   Function = { fg = palette.blue },
   Type = { fg = palette.dgreen },
   Comment = { fg = palette.comment },
