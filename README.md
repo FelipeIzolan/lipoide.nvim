@@ -38,8 +38,9 @@ vim.cmd("colorscheme lipoide")
 # 🍭 Colors
 ![image](https://github.com/FelipeIzolan/lipoide.nvim/assets/80170121/94e1ae9a-d389-4e49-9888-a759abd99b0b)
 
-
 ## 🔗 Compatibility
 
 - Treesitter (required)
 - Netrw
+- Lazy
+- IndentMini

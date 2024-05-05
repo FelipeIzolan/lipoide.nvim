@@ -76,7 +76,11 @@ local highlight = {
   NetrwDir = { fg = palette.green },
 
   -- Lazy
-  LazyButton = { fg = palette.fg , bg = palette.gutter_bg }
+  LazyButton = { fg = palette.fg , bg = palette.gutter_bg },
+
+  -- IndentMini
+  IndentLine = { fg = palette.comment },
+  IndentLineCurrent = { fg = palette.comment }
 }
 
 return highlight
