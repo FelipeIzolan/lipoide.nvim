@@ -4,7 +4,7 @@ local M = {}
 M.config = {}
 
 local function apply_config()
-   if M.config.transparent then
+  if M.config.transparent then
     highlight.Normal.bg = nil
   end
 

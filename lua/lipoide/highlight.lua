@@ -1,86 +1,119 @@
 local palette = require("lipoide.palette")
 
 local highlight = {
-  Normal = { fg = palette.fg, bg = palette.bg },
-  NormalFloat = { fg = palette.fg, bg = palette.gutter_bg },
-  Visual = { bg = palette.menu },
-  VisualNOS = { bg = palette.menu },
-  FloatBorder = { fg = palette.comment },
-  EndOfBuffer = { fg = palette.comment },
+  Normal                     = { fg = palette.fg, bg = palette.background },
+  NormalFloat                = { fg = palette.fg, bg = palette.background1 },
 
-  String = { fg = palette.agreen },
-  Number = { fg = palette.agreen },
-  Float = { fg = palette.agreen },
-  Boolean = { fg = palette.agreen },
+  FloatBorder                = { fg = palette.comment },
+  EndOfBuffer                = { fg = palette.comment },
 
-  Operator = { fg = palette.green },
-  Statement = { fg = palette.green },
-  Conditional = { fg = palette.green },
-  Keyword = { fg = palette.green },
-  Keywords = { fg = palette.green },
-  Include = { fg = palette.green },
-  Constant = { fg = palette.fg },
-  Special = { fg = palette.blue },
-  Identifier = { fg = palette.fg },
-  Function = { fg = palette.blue },
-  Type = { fg = palette.dgreen },
-  Comment = { fg = palette.comment },
-  Error = { fg = palette.red },
-  PreProc = { fg = palette.green },
+  Visual                     = { bg = palette.visual },
+  VisualNOS                  = { bg = palette.visual },
 
-  FoldColumn = { bg = palette.gutter_bg },
-  SignColumn = { bg = palette.gutter_bg },
-  LineNr = { fg = palette.comment, bg = palette.gutter_bg },
+  FoldColumn                 = { bg = palette.background },
+  SignColumn                 = { bg = palette.background },
+  LineNr                     = { fg = palette.comment, bg = palette.background },
 
-  Pmenu = { fg = palette.fg, bg = palette.menu },
+  Pmenu                      = { fg = palette.fg, bg = palette.background1 },
+  WinSeparator               = { fg = palette.background1, bg = palette.background },
 
-  -- Treesitter
-  ['@method'] = { fg = palette.blue },
-  ['@character'] = { fg = palette.agreen },
-  ['@type.qualifier'] = { fg = palette.green },
-  ['@keyword.function'] = { fg = palette.green },
-  ['@Function.builtin'] = { fg = palette.blue },
-  ['@variable.builtin'] = { fg = palette.green },
-  ['@constructor'] = { fg = palette.blue },
-  ['@constructor.lua'] = { fg = palette.green },
-  ['@punctuation.delimiter'] = { fg = palette.green },
-  ['@punctuation.bracket'] = { fg = palette.green },
+  -------------------------------------------------------------------------------------
 
-  -- LSP
-  DiagnosticError = { fg = palette.red, bg = palette.gutter_bg },
-  DiagnosticWarn = { fg = palette.yellow, bg = palette.gutter_bg },
-  DiagnosticInfo = { fg = palette.blue, bg = palette.gutter_bg },
-  DiagnosticHint = { fg = palette.blue, bg = palette.gutter_bg },
+  Error                      = { fg = palette.red },
+  Comment                    = { fg = palette.comment },
 
-  DiagnosticUnderlineError = { underline = true, sp = palette.red },
-  DiagnosticUnderlineWarn = { underline = true, sp = palette.yellow },
-  DiagnosticUnderlineInfo = { underline = true, sp = palette.blue },
-  DiagnosticUnderlineHint = { underline = true, sp = palette.blue },
+  Constant                   = { fg = palette.fg },
+  String                     = { fg = palette.green2 },
+  Character                  = { fg = palette.green2 },
+  Number                     = { fg = palette.green2 },
+  Float                      = { fg = palette.green2 },
+  Boolean                    = { fg = palette.green2 },
 
-  DiagnosticSignError = { fg = palette.red, bg = palette.gutter_bg },
-  DiagnosticSignWarn = { fg = palette.yellow, bg = palette.gutter_bg },
-  DiagnosticSignInfo = { fg = palette.blue, bg = palette.gutter_bg },
-  DiagnosticSignHint = { fg = palette.blue, bg = palette.gutter_bg },
+  Identifier                 = { fg = palette.fg },
+  Function                   = { fg = palette.blue },
 
-  DiagnosticFloatingError = { fg = palette.red },
-  DiagnosticFloatingWarn = { fg = palette.yellow },
-  DiagnosticFloatingInfo = { fg = palette.blue },
-  DiagnosticFloatingHint = { fg = palette.blue },
+  Statement                  = { fg = palette.green },
+  Conditional                = { fg = palette.green },
+  Repeat                     = { fg = palette.green },
+  Label                      = { fg = palette.green },
+  Operator                   = { fg = palette.green },
+  Keyword                    = { fg = palette.green },
+  Exception                  = { fg = palette.green },
+
+  PreProc                    = { fg = palette.green },
+  Include                    = { fg = palette.green },
+  Define                     = { fg = palette.green },
+  Macro                      = { fg = palette.green },
+  PreCondit                  = { fg = palette.green },
+
+  Type                       = { fg = palette.green1 },
+  StorageClass               = { fg = palette.green },
+  Structure                  = { fg = palette.green },
+  Typedef                    = { fg = palette.green },
+
+  Special                    = { fg = palette.green1 },
+  Delimiter                  = { fg = palette.green },
+
+  -- LSP ------------------------------------------------------------------------------
+
+  DiagnosticError            = { fg = palette.red, bg = palette.background },
+  DiagnosticWarn             = { fg = palette.yellow, bg = palette.background },
+  DiagnosticInfo             = { fg = palette.blue, bg = palette.background },
+  DiagnosticHint             = { fg = palette.blue, bg = palette.background },
+
+  DiagnosticUnderlineError   = { underline = true, sp = palette.red },
+  DiagnosticUnderlineWarn    = { underline = true, sp = palette.yellow },
+  DiagnosticUnderlineInfo    = { underline = true, sp = palette.blue },
+  DiagnosticUnderlineHint    = { underline = true, sp = palette.blue },
+
+  DiagnosticSignError        = { fg = palette.red, bg = palette.background },
+  DiagnosticSignWarn         = { fg = palette.yellow, bg = palette.background },
+  DiagnosticSignInfo         = { fg = palette.blue, bg = palette.background },
+  DiagnosticSignHint         = { fg = palette.blue, bg = palette.background },
+
+  DiagnosticFloatingError    = { fg = palette.red },
+  DiagnosticFloatingWarn     = { fg = palette.yellow },
+  DiagnosticFloatingInfo     = { fg = palette.blue },
+  DiagnosticFloatingHint     = { fg = palette.blue },
 
   DiagnosticVirtualTextError = { fg = palette.red },
-  DiagnosticVirtualTextWarn = { fg = palette.yellow },
-  DiagnosticVirtualTextInfo = { fg = palette.blue },
-  DiagnosticVirtualTextHint = { fg = palette.blue },
+  DiagnosticVirtualTextWarn  = { fg = palette.yellow },
+  DiagnosticVirtualTextInfo  = { fg = palette.blue },
+  DiagnosticVirtualTextHint  = { fg = palette.blue },
 
-  -- NETRW
-  NetrwDir = { fg = palette.green },
+  -- Treesitter -----------------------------------------------------------------------
 
-  -- Lazy
-  LazyButton = { fg = palette.fg , bg = palette.gutter_bg },
+  ['@function.builtin']      = { fg = palette.blue },
+  ['@constructor']           = { fg = palette.blue },
+  ['@constructor.lua']       = { fg = palette.green },
 
-  -- IndentMini
-  IndentLine = { fg = palette.comment },
-  IndentLineCurrent = { fg = palette.comment }
+  -- Netrw ----------------------------------------------------------------------------
+
+  NetrwDir                   = { fg = palette.green },
+
+  -- Lazy -----------------------------------------------------------------------------
+
+  LazyButton                 = { fg = palette.fg, bg = palette.background1 },
+
+  -- NvimTree -------------------------------------------------------------------------
+
+  NvimTreeNormal             = { fg = palette.fg, bg = palette.background1 },
+  NvimTreeEndOfBuffer        = { fg = palette.background1 },
+  NvimTreeIndentMarker       = { fg = palette.comment },
+  NvimTreeStatusLine         = { fg = palette.background1, bg = palette.background1 },
+  NvimTreeStatusLineNC       = { link = 'NvimTreeStatusLine' },
+  NvimTreeWinSeparator       = { link = 'NvimTreeStatusLine' },
+
+  -- IndentMini -----------------------------------------------------------------------
+
+  IndentLine                 = { fg = palette.comment },
+  IndentLineCurrent          = { fg = palette.comment },
+
+  -- NvimCmp --------------------------------------------------------------------------
+
+  CmpNormal                  = { fg = '#FFFFFF', bg = palette.background2 },
+  CmpMenu                    = { italic = true },
+  CmpKind                    = { fg = '#FFFFFF', bg = palette.green }
 }
 
 return highlight
