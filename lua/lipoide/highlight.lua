@@ -17,6 +17,9 @@ local highlight = {
   Pmenu                      = { fg = palette.fg, bg = palette.background1 },
   WinSeparator               = { fg = palette.background1, bg = palette.background },
 
+  Question                   = { fg = palette.green },
+  Directory                  = { fg = palette.blue },
+
   -------------------------------------------------------------------------------------
 
   Error                      = { fg = palette.red },
@@ -98,8 +101,11 @@ local highlight = {
   -- NvimTree -------------------------------------------------------------------------
 
   NvimTreeNormal             = { fg = palette.fg, bg = palette.background1 },
+  NvimTreeFolderIcon         = { fg = palette.blue },
+
   NvimTreeEndOfBuffer        = { fg = palette.background1 },
   NvimTreeIndentMarker       = { fg = palette.comment },
+
   NvimTreeStatusLine         = { fg = palette.background1, bg = palette.background1 },
   NvimTreeStatusLineNC       = { link = 'NvimTreeStatusLine' },
   NvimTreeWinSeparator       = { link = 'NvimTreeStatusLine' },
@@ -114,6 +120,7 @@ local highlight = {
   CmpNormal                  = { fg = '#FFFFFF', bg = palette.background2 },
   CmpMenu                    = { italic = true },
   CmpKind                    = { fg = '#FFFFFF', bg = palette.green }
+
 }
 
 return highlight
